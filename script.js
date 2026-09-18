@@ -1,0 +1,1 @@
+function showMessage(text){const box=document.getElementById("message");box.textContent=text;box.style.display="block";box.scrollIntoView({behavior:"smooth",block:"center"});}

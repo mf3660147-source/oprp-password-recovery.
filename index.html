@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OPRP | Password Recovery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="background-glow"></div>
+  <header class="topbar">
+    <div class="brand"><span>♛</span> OPRP <small>ROLEPLAY</small></div>
+    <nav><a class="active" href="#home">Home</a><a href="#support">Support</a><a href="#privacy">Privacy</a></nav>
+  </header>
+
+  <main class="shell" id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">SECURE YOUR ACCOUNT</p>
+        <h1>PASSWORD<br><strong>RECOVERY</strong></h1>
+        <p class="description">Use the recovery QR code supplied by OPRP to securely recover your account. This flow is designed for Discord verification and one-time token protection.</p>
+        <div class="feature-row">
+          <div><b>◉</b><span>Discord<br>Verification</span></div>
+          <div><b>⌁</b><span>One-Time<br>Token</span></div>
+          <div><b>▣</b><span>Secure<br>Encryption</span></div>
+          <div><b>♙</b><span>Account<br>Control</span></div>
+        </div>
+      </div>
+
+      <div class="card qr-card">
+        <div class="qr-symbol">▦</div>
+        <h2>Scan QR Code</h2>
+        <p>Open the recovery link from your OPRP passport or Discord bot.</p>
+        <button onclick="showMessage('QR entry will be connected to the secure backend after deployment.')">Scan to Continue →</button>
+      </div>
+    </section>
+
+    <section class="card workflow">
+      <div class="section-icon">♙</div>
+      <h2>Secure Recovery Workflow</h2>
+      <p class="muted">The production version will verify the token, confirm the Discord identity, and allow a single successful password reset.</p>
+      <div class="steps">
+        <span class="done">1<br><small>Token</small></span>
+        <span>2<br><small>Discord</small></span>
+        <span>3<br><small>Account</small></span>
+        <span>4<br><small>Reset</small></span>
+      </div>
+      <button class="secondary" onclick="showMessage('Backend connection placeholder: Discord OAuth2 + one-time token verification.')">View Verification Status</button>
+    </section>
+
+    <section class="card reset-card">
+      <div class="section-icon">▣</div>
+      <h2>Reset Your Password</h2>
+      <p class="muted">Demo interface only. Password changes will be enabled after the secure backend is connected.</p>
+      <form onsubmit="event.preventDefault(); showMessage('Demo only. Connect the backend before accepting real passwords.');">
+        <label>New Password</label>
+        <input type="password" placeholder="Enter new password" minlength="12" required />
+        <label>Confirm Password</label>
+        <input type="password" placeholder="Confirm new password" minlength="12" required />
+        <button type="submit">Reset Password</button>
+      </form>
+    </section>
+
+    <div id="message" class="message" role="status"></div>
+  </main>
+
+  <footer>
+    <span>OPRP Roleplay</span><span>Safe • Secure • Together</span><span>One City</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
